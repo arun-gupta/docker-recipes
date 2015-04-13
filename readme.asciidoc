@@ -6,6 +6,12 @@
 
 http://blog.arungupta.me/docker-machine-seutp-docker-host-techtip78
 
+### Private Registry
+
+#### Docker Registry
+
+#### JFrog Artifactory
+
 ## Application Server
 
 ### Single Application Server
