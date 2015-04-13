@@ -8,23 +8,52 @@ http://blog.arungupta.me/docker-machine-seutp-docker-host-techtip78
 
 ## Application Server
 
-### Application Server + In-memory Database
+### Single Application Server
+
+### Multiple Application Servers
+
+### Load Balancing
+
+#### Undertow
+
+#### Apache
+
+## Persistence
+
+This section will explain how an Application Server and a Database server can be used to deploy an application.
+
+### In-memory Database
 
 http://blog.arungupta.me/javaee7-lab-wildfly-docker/
 
-### Two Containers on Same Host Using Linking
+### Same Host, Using Linking
 
 http://blog.arungupta.me/wildfly-javaee7-mysql-link-two-docker-container-techtip65/
 
-### Two Containers on Same Host Using Compose
+### Same Host, Using Compose
 
 http://blog.arungupta.me/docker-compose-orchestrate-containers-techtip77/
 
-### Two Containers on Different Hosts using IP Address
+### Different Hosts, Using IP Address
 
 http://blog.arungupta.me/docker-container-linking-across-multiple-hosts-techtip69/
 
+### Persistence on Data-only Containers
+
+TBD
+
 ## Clustering
+
+What are the different clustering frameworks? Where do they excel? Can they work with each other? Do they need to work with each other? Pros/cons of each framework?
+
+[options="header"]
+|====
+| Framework | Pros | Cons
+| Swarm | |
+| Kubernetes | |
+| Mesos | |
+| Juju | |
+|====
 
 ### Docker Swarm
 
@@ -34,22 +63,77 @@ TBD
 
 http://blog.arungupta.me/mysql-kubernetes-service-access-wildfly-pod-techtip72/
 
-## Tooling
-
-### Deploy Java EE Application from Eclipse
-
-http://blog.arungupta.me/deploy-wildfly-docker-eclipse/
-
-### Deploy Java EE Application from NetBeans
+### Mesos
 
 TBD
 
-### Deploy Java EE Application from IntelliJ
+### Juju
+
+TBD
+
+## Application Development Tooling
+
+[options="header"]
+|====
+| IDE | Pros | Cons
+| Eclipse | |
+| NetBeans | |
+| IntelliJ | |
+|====
+
+What support is offered by the three major IDEs to enable application development on Docker?
+
+### Eclipse
+
+http://blog.arungupta.me/deploy-wildfly-docker-eclipse/
+
+### NetBeans
+
+No support yet
+
+### IntelliJ
 
 http://blog.jetbrains.com/idea/2015/03/docker-support-in-intellij-idea-14-1/
 
 ## Testing
 
+How do you test applications running using Docker?
+
 ### Test Java EE Applications using Arquillian Cube
 
 http://blog.arungupta.me/run-javaee-tests-wildfly-docker-arquillian-cube/
+
+### Docker Maven Plugin
+
+https://github.com/rhuss/docker-maven-plugin
+
+## PaaS
+
+What does it take to run Docker images on PaaS?
+
+[options="header"]
+|====
+| PaaS | Pros | Cons
+| OpenShift | |
+| Amazon | |
+| Google | |
+|====
+
+### OpenShift
+
+### Amazon
+
+### Google
+
+## Full Stack
+
+This section will explain how different components of a typical Java EE application can be setup using Docker.
+
+### Messaging
+
+### Caching
+
+### Transactions
+
+### Mail
+
