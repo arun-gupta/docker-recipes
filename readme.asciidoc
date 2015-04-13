@@ -44,7 +44,9 @@ http://blog.arungupta.me/deploy-wildfly-docker-eclipse/
 
 TBD
 
-### Deploy Java EE Application from NetBeans
+### Deploy Java EE Application from IntelliJ
+
+http://blog.jetbrains.com/idea/2015/03/docker-support-in-intellij-idea-14-1/
 
 ## Testing
 
