@@ -1,2 +1,53 @@
 # Docker Recipes
 
+## Setup
+
+### Docker Machine
+
+http://blog.arungupta.me/docker-machine-seutp-docker-host-techtip78
+
+## Application Server
+
+### Application Server + In-memory Database
+
+http://blog.arungupta.me/javaee7-lab-wildfly-docker/
+
+### Two Containers on Same Host Using Linking
+
+http://blog.arungupta.me/wildfly-javaee7-mysql-link-two-docker-container-techtip65/
+
+### Two Containers on Same Host Using Compose
+
+http://blog.arungupta.me/docker-compose-orchestrate-containers-techtip77/
+
+### Two Containers on Different Hosts using IP Address
+
+http://blog.arungupta.me/docker-container-linking-across-multiple-hosts-techtip69/
+
+## Clustering
+
+### Docker Swarm
+
+TBD
+
+### Kubernetes
+
+http://blog.arungupta.me/mysql-kubernetes-service-access-wildfly-pod-techtip72/
+
+## Tooling
+
+### Deploy Java EE Application from Eclipse
+
+http://blog.arungupta.me/deploy-wildfly-docker-eclipse/
+
+### Deploy Java EE Application from NetBeans
+
+TBD
+
+### Deploy Java EE Application from NetBeans
+
+## Testing
+
+### Test Java EE Applications using Arquillian Cube
+
+http://blog.arungupta.me/run-javaee-tests-wildfly-docker-arquillian-cube/
