@@ -143,3 +143,6 @@ This section will explain how different components of a typical Java EE applicat
 
 ### Mail
 
+### Security
+
+http://blog.keycloak.org/2015/04/keycloak-on-kubernetes-with-openshift-3.html
