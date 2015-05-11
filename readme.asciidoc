@@ -6,6 +6,12 @@
 
 http://blog.arungupta.me/docker-machine-seutp-docker-host-techtip78
 
+[source, text]
+----
+curl -L https://github.com/docker/machine/releases/download/v0.2.0/docker-machine_darwin-amd64 > /usr/local/bin/docker-machine
+docker-machine create --driver virtualbox mydocker
+----
+
 ### Private Registry
 
 #### Docker Registry
@@ -16,7 +22,12 @@ http://blog.arungupta.me/docker-machine-seutp-docker-host-techtip78
 
 ### Single Application Server
 
-### Multiple Application Servers
+[source, text]
+----
+docker run -it -p 8080:8080 jboss/wildfly
+----
+
+### Multiple Instances of an Application Server
 
 ### Load Balancing
 
@@ -32,11 +43,35 @@ This section will explain how an Application Server and a Database server can be
 
 http://blog.arungupta.me/javaee7-lab-wildfly-docker/
 
+[source, text]
+----
+docker run -it -p 8080:8080 arungupta/javaee7-hol
+----
+
 ### Same Host, Using Linking
 
 http://blog.arungupta.me/wildfly-javaee7-mysql-link-two-docker-container-techtip65/
 
+[source, text]
+----
+docker run --name mysqldb -e MYSQL_USER=mysql -e MYSQL_PASSWORD=mysql -e MYSQL_DATABASE=sample -e MYSQL_ROOT_PASSWORD=supersecret -d mysql
+docker run --name mywildfly --link mysqldb:db -p 8080:8080 -d arungupta/wildfly-mysql-javaee7
+docker-machine ip
+curl http://<IP_ADDRESS>:8080/employees/index.html
+----
+
 ### Same Host, Using Compose
+
+[source, text]
+----
+curl -L https://github.com/docker/compose/releases/download/1.1.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose up -d
+docker-compose ps
+docker-compose logs
+docker-machine ip
+curl http://<IP_ADDRESS>:8080/employees/resources/employees/
+----
 
 http://blog.arungupta.me/docker-compose-orchestrate-containers-techtip77/
 
