@@ -16,7 +16,11 @@ docker-machine create --driver virtualbox mydocker
 
 #### Docker Registry
 
+http://docs.docker.com/registry/
+
 #### JFrog Artifactory
+
+http://www.jfrog.com/confluence/display/RTF/Docker+Repositories
 
 ## Application Server
 
@@ -29,7 +33,12 @@ docker run -it -p 8080:8080 jboss/wildfly
 
 ### Multiple Instances of an Application Server
 
+. Create multiple machine
+. One application server on each machine
+
 ### Load Balancing
+
+. Create a new machine for LB
 
 #### Undertow
 
@@ -104,12 +113,15 @@ http://blog.arungupta.me/clustering-docker-swarm-techtip85/
 ----
 docker run swarm create
 docker-machine create -d virtualbox --swarm --swarm-master --swarm-discovery token://$TOKEN swarm-master
-eval "$(docker-machine env swarm-master)"
+eval $(docker-machine env swarm-master)
 docker info
 docker-machine create -d virtualbox --swarm --swarm-discovery token://$TOKEN swarm-node-01
 docker-machine create -d virtualbox --swarm --swarm-discovery token://$TOKEN swarm-node-02
 docker-machine ls
 docker info
+docker ps
+eval $(docker-machine env --swarm swarm-master)
+docker run -it -p 8080:8080 arungupta/javaee7-hol
 docker ps
 ----
 
