@@ -81,7 +81,7 @@ http://blog.arungupta.me/docker-container-linking-across-multiple-hosts-techtip6
 
 ### Persistence on Data-only Containers
 
-TBD
+
 
 ## Clustering
 
@@ -99,6 +99,19 @@ What are the different clustering frameworks? Where do they excel? Can they work
 ### Docker Swarm
 
 http://blog.arungupta.me/clustering-docker-swarm-techtip85/
+
+[source, text]
+----
+docker run swarm create
+docker-machine create -d virtualbox --swarm --swarm-master --swarm-discovery token://$TOKEN swarm-master
+eval "$(docker-machine env swarm-master)"
+docker info
+docker-machine create -d virtualbox --swarm --swarm-discovery token://$TOKEN swarm-node-01
+docker-machine create -d virtualbox --swarm --swarm-discovery token://$TOKEN swarm-node-02
+docker-machine ls
+docker info
+docker ps
+----
 
 ### Kubernetes
 
