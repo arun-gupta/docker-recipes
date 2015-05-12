@@ -12,8 +12,6 @@ curl -L https://github.com/docker/machine/releases/download/v0.2.0/docker-machin
 docker-machine create --driver virtualbox mydocker
 ----
 
-Access at http://<IP_ADDRESS>:8080/movieplex7.
-
 ### Private Registry
 
 #### Docker Registry
@@ -32,6 +30,8 @@ http://www.jfrog.com/confluence/display/RTF/Docker+Repositories
 ----
 docker run -it -p 8080:8080 jboss/wildfly
 ----
+
+Access at http://<IP_ADDRESS>:8080/.
 
 #### List exact version of layers being pulled
 
@@ -62,6 +62,8 @@ http://blog.arungupta.me/javaee7-lab-wildfly-docker/
 ----
 docker run -it -p 8080:8080 arungupta/javaee7-hol
 ----
+
+Access at http://<IP_ADDRESS>:8080/movieplex7.
 
 ### Same Host, Using Linking
 
