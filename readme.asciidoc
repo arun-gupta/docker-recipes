@@ -31,6 +31,10 @@ http://www.jfrog.com/confluence/display/RTF/Docker+Repositories
 docker run -it -p 8080:8080 jboss/wildfly
 ----
 
+#### List exact version of layers being pulled
+
+#### Save Container Running State
+
 ### Multiple Instances of an Application Server
 
 . Create multiple machine
@@ -90,7 +94,13 @@ http://blog.arungupta.me/docker-container-linking-across-multiple-hosts-techtip6
 
 ### Persistence on Data-only Containers
 
+http://blog.arungupta.me/docker-mysql-persistence/
 
+[source, text]
+----
+docker create --name mysql_data -v /var/lib/mysql mysql
+docker run --name mysqldb --volumes-from mysql_data -v /var/lib/mysql:/var/lib/mysql -e MYSQL_USER=mysql -e MYSQL_PASSWORD=mysql -e MYSQL_DATABASE=sample -e MYSQL_ROOT_PASSWORD=supersecret -it -p 3306:3306 mysql
+----
 
 ## Clustering
 
