@@ -12,6 +12,8 @@ curl -L https://github.com/docker/machine/releases/download/v0.2.0/docker-machin
 docker-machine create --driver virtualbox mydocker
 ----
 
+Access at http://<IP_ADDRESS>:8080/movieplex7.
+
 ### Private Registry
 
 #### Docker Registry
@@ -70,7 +72,7 @@ http://blog.arungupta.me/wildfly-javaee7-mysql-link-two-docker-container-techtip
 docker run --name mysqldb -e MYSQL_USER=mysql -e MYSQL_PASSWORD=mysql -e MYSQL_DATABASE=sample -e MYSQL_ROOT_PASSWORD=supersecret -d mysql
 docker run --name mywildfly --link mysqldb:db -p 8080:8080 -d arungupta/wildfly-mysql-javaee7
 docker-machine ip
-curl http://<IP_ADDRESS>:8080/employees/index.html
+	
 ----
 
 ### Same Host, Using Compose
@@ -134,6 +136,10 @@ eval $(docker-machine env --swarm swarm-master)
 docker run -it -p 8080:8080 arungupta/javaee7-hol
 docker ps
 ----
+
+#### Deploy Java EE application to Docker Swarm
+
+http://blog.arungupta.me/deploy-javaee-docker-swarm-cluster
 
 ### Kubernetes
 
