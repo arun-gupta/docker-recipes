@@ -189,7 +189,7 @@ http://blog.arungupta.me/run-javaee-tests-wildfly-docker-arquillian-cube/
 
 ### Docker Maven Plugin
 
-https://github.com/rhuss/docker-maven-plugin
+http://blog.arungupta.me/javaee-docker-maven-plugin/
 
 ## PaaS
 
